@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+    <head>
+        <link href="./Slide_Deck.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
+
+    <body>
+        <div class = "website">
+            <i class="material-icons">cloud</i>
+            <button class="rightbutton" onclick="nextSlide(1)">Name_of_Button</button>
+
+            <button class="leftbutton" onclick="nextSlide(-1)">Name_of_Button</button>
+
+
+            <div class = "picture">
+                <div class = "text">Chichen Itza</div>
+
+                <img src="Assets\picture_1.png.webp" alt="#1" id = "image">  
+
+                <div class = "slidenumber">1/7</div>
+
+            </div>
+
+            <div class = "picture">
+                <div class = "text">Petra</div>
+
+                <img src="Assets\picture_2.png.webp" alt="#2" id = "image"> 
+                
+                <div class = "slidenumber">2/7</div>
+
+            </div>
+
+            <div class = "picture">
+                <div class = "text">Machu Picchu</div>
+
+                <img src="Assets\picture_3.png.webp" alt="#3" id = "image"> 
+
+                <div class = "slidenumber">3/7</div>
+
+            </div>
+
+            <div class = "picture">
+                <div class = "text">Great Wall of China</div>
+
+                <img src="Assets\picture_4.png.webp" alt="#4" id = "image"> 
+
+                <div class = "slidenumber">4/7</div>
+
+            </div>
+
+            <div class = "picture">
+                <div class = "text">Colosseum</div>
+
+                <img src="Assets\picture_5.png.webp" alt="#5" id = "image"> 
+
+                <div class = "slidenumber">5/7</div>
+
+            </div>
+
+            <div class = "picture">
+                <div class = "text">Christ the Redeemer</div>
+
+                <img src="Assets\picture_6.png.webp" alt="#6" id = "image"> 
+
+                <div class = "slidenumber">6/7</div>
+
+            </div>
+
+            <div class = "picture">
+                <div class = "text">Taj Mahal</div>
+
+                <img src="Assets\picture_7.png.webp" alt="#7" id = "image"> 
+
+                <div class = "slide number">7/7</div>
+
+            </div>
+            
+            <div class = "circles">
+                <span class=“dot”></span>
+
+                <span class=“dot”></span>
+                
+                <span class=“dot”></span>
+                
+                <span class=“dot”></span>
+                
+                <span class=“dot”></span>
+                
+                <span class=“dot”></span>
+                
+                <span class=“dot”></span>
+            </div>
+        </div>
+
+        <script>
+            let slideIndex = 0; // current slide that we are on
+
+            Transition(slideIndex);
+
+            function nextSlide(n) { // n = number of slides we want to move to the right (aka 1 in ethier direction)
+                Transition(slideIndex + n)
+            }
+
+            // Displaying any given slide (helper function)
+            function Transition(n) {
+                let slides = documet.getElementsbyClassName("picture"); // list of the picture
+                var x = 0;
+                if (n >= 7) {
+                    slideIndex = 0
+                }
+                
+                if (n < 0) {
+                    slideIndex = 6
+                }
+
+                for (x = 0; x < 7; x++) {
+                    slides[x].style.display = "none";
+                }
+                slides[slideIndex].style.display = "block";
+                }
+        </script>
+    </body>
+</html>
