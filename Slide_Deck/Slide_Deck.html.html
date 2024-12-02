@@ -6,10 +6,10 @@
 
     <body>
         <div class = "website">
-            <i class="material-icons">cloud</i>
-            <button class="rightbutton" onclick="nextSlide(1)">Name_of_Button</button>
-
-            <button class="leftbutton" onclick="nextSlide(-1)">Name_of_Button</button>
+        <div class = "flex-box">
+                <button id = "rightbutton" onclick="nextSlide(-1)">Name_of_Button</button>
+        </div>
+            <button id = "leftbutton" onclick="nextSlide(1)">Name_of_Button</button>
 
 
             <div class = "picture">
@@ -98,19 +98,21 @@
             Transition(slideIndex);
 
             function nextSlide(n) { // n = number of slides we want to move to the right (aka 1 in ethier direction)
-                Transition(slideIndex + n)
+                slideIndex =slideIndex + n;
+                Transition(slideIndex + n);
             }
 
             // Displaying any given slide (helper function)
             function Transition(n) {
-                let slides = documet.getElementsbyClassName("picture"); // list of the picture
+                let slides = document.getElementsByClassName("picture"); // list of the picture
                 var x = 0;
                 if (n >= 7) {
-                    slideIndex = 0
+                    slideIndex = 0;
+                    console.log(slideIndex);
                 }
-                
+                  
                 if (n < 0) {
-                    slideIndex = 6
+                    slideIndex = 6;
                 }
 
                 for (x = 0; x < 7; x++) {

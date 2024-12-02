@@ -13,7 +13,7 @@
     height: 40vh;
     align-items: center;
     justify-content: center;
-    display: grid;
+    display: none;
     margin: auto;
 }
 
@@ -21,4 +21,10 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+#rightbutton {
+    justify-content: right;
+    right: 0;
+    display: flex;
 }
