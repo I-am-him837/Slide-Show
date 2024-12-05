@@ -22,7 +22,7 @@
             </div>
 
             <div class = "picture">
-                <div class = "text">Petra</div>
+                <div class = "text">بترا</div>
 
                 <img src="Assets\picture_2.png.webp" alt="#2" id = "image"> 
                 
@@ -67,7 +67,7 @@
             </div>
 
             <div class = "picture">
-                <div class = "text">Taj Mahal</div>
+                <div class = "text">ताजमहल</div>
 
                 <img src="Assets\picture_7.png.webp" alt="#7" id = "image"> 
 
@@ -106,12 +106,12 @@
             function Transition(n) {
                 let slides = document.getElementsByClassName("picture"); // list of the picture
                 var x = 0;
-                if (n >= 7) {
+                if (n > 7) {
                     slideIndex = 0;
                     console.log(slideIndex);
                 }
                   
-                if (n < 0) {
+                if (n < -1) {
                     slideIndex = 6;
                 }
 
