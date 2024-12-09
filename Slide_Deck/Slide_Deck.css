@@ -5,7 +5,8 @@
     margin: auto;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    flex-direction: row;
 }
 
 .picture {
@@ -16,7 +17,7 @@
     display: none;
     margin: auto;
     position: absolute;
-    top: 1450%;
+    top: 1200%;
     left: 30%;
 }
 
@@ -28,8 +29,23 @@
 
 #rightbutton {
     justify-content: right;
-    right: 0;
-    display: flex;
+    float: right;
+    margin-bottom: 0;
+    position: absolute;
+    top: 35vh;
+    width: 5vw;
+    height: 5vh;
+    right: 550px;
+}
+
+#leftbutton {
+    justify-content: left;
+    margin-bottom: 0;
+    top: 35vh;
+    position: absolute;
+    width: 5vw;
+    height: 5vh;
+    left: 600px;
 }
 
 .text {
@@ -38,6 +54,11 @@
     font-weight: 1000;
 }
 
-text:hover {
-    font-weight: bolder;
+button:hover {
+    width: 5vw * 3;
+    height: 5vh * 3;
+}
+
+text:hover{
+    
 }
